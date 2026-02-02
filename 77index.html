@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>喵喵软件库</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft Yahei", sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+        }
+
+        /* 顶部导航栏 */
+        .navbar {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .nav-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        /* 卡片容器 */
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        /* 卡片样式 */
+        .card {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .card-link {
+            display: block;
+            color: #0066cc;
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+            word-break: break-all;
+        }
+
+        .card-code {
+            color: #666;
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+
+        .card-code:hover {
+            color: #0066cc;
+        }
+
+        /* 二维码卡片样式 */
+        .qrcode-card {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .qrcode-card img {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <nav class="navbar">
+        <div class="nav-title">🐱 喵喵软件库</div>
+    </nav>
+
+    <!-- 卡片容器 -->
+    <div class="container">
+        <!-- 卡片1 -->
+        <div class="card">
+            <h3 class="card-title">📦 喵喵核心库</h3>
+            <a href="https://wwatq.lanzouq.com/b016kkxs4j" class="card-link" target="_blank">https://wwatq.lanzouq.com/b016kkxs4j</a>
+            <p class="card-code" onclick="copyCode(this)">提取码：无</p>
+        </div>
+
+        <!-- 卡片2 -->
+        <div class="card qrcode-card">
+            <h3 class="card-title">💬 QQ频道群</h3>
+            <img src="https://你的二维码图片链接" alt="QQ频道群二维码">
+        </div>
+
+        <!-- 卡片3 -->
+        <div class="card">
+            <h3 class="card-title">📦 汤姆软件库</h3>
+            <a href="https://tmrjk.com" class="card-link" target="_blank">https://tmrjk.com</a>
+        </div>
+
+        <!-- 卡片4 -->
+        <div class="card">
+            <h3 class="card-title">📦 喵喵影视动漫剪辑素材资源合集</h3>
+            <a href="https://pan.baidu.com/s/1BB-G-NJOOiWTcwWW81R20g?pwd=V8F1" class="card-link" target="_blank">https://pan.baidu.com/s/1BB-G-NJOOiWTcwWW81R20g?pwd=V8F1</a>
+        </div>
+
+        <!-- 卡片5 -->
+        <div class="card">
+            <h3 class="card-title">📦 喵喵免费影视动漫资源合集</h3>
+            <a href="https://wwatq.lanzouq.com/s/qwer99966" class="card-link" target="_blank">https://wwatq.lanzouq.com/s/qwer99966</a>
+        </div>
+
+        <!-- 卡片6 -->
+        <div class="card">
+            <h3 class="card-title">📦 全网软件库合集 猪猪 海豚 蛋蛋 汤姆 黑白 芒果软件库</h3>
+            <a href="https://wwatq.lanzouq.com/b016kkxt0b" class="card-link" target="_blank">https://wwatq.lanzouq.com/b016kkxt0b</a>
+        </div>
+
+    </div>
+
+    <script>
+        function copyCode(element) {
+            const code = element.textContent.split("：")[1];
+            navigator.clipboard.writeText(code).then(() => {
+                alert("提取码已复制：" + code);
+            });
+        }
+    </script>
+</body>
+</html>
